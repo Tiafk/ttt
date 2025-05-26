@@ -415,6 +415,9 @@
 }
 
 @media (max-width: 1920px) {
+  .main .wrapper .gap-sec {
+    gap: clamp(20px, 3vw, 32px);
+  }
   .main .wrapper {
     gap: clamp(50px, 6vw, 100px);
     padding: calc(14px + 17 * (100vw - 390px) / 1920);
