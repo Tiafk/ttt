@@ -1,0 +1,90 @@
+@import './_sec1';
+@import './_sec2';
+@import './_sec3';
+@import './_sec4';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .wrapper {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Inter-Regular', sans-serif;
+        gap: 100px;
+        width: 100%;
+        max-width: 1281px;
+        padding-top: 47px;
+        padding: 0 24px;
+
+        .text {
+            font-size: 18px;
+            line-height: 150%;
+            color: #202020;
+            font-family: 'Inter-Regular', sans-serif;
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-size: 50px;
+            font-family: 'Unbounded', sans-serif;
+            line-height: 120%;
+            color: #000000;
+        }
+
+        .gap-sec {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+}
+
+@media (max-width:1920px) {
+    .main .wrapper {
+        gap: clamp(50px, 6vw, 100px);
+        padding: calc(14px + (10 + 10 * 0.7) * ((100vw - 390px) / 1920));
+    }
+    .main .wrapper .title {
+        font-size: calc(33px + (17 + 17 * 0.7) * ((100vw - 390px) / 1920));
+    }
+    .main .wrapper .text {
+        font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 390px) / 1920));
+    }
+}
+
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('../fonts/Unbounded-Bold.ttf');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('../fonts/Inter_18pt-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../fonts/Inter_18pt-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url('../fonts/Inter_18pt-Medium.ttf');
+    font-style: normal;
+    font-weight: 500;
+}
